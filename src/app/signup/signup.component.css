@@ -1,0 +1,20 @@
+.container{
+    background-image: URL(/assets/Foods-1.jpg);
+}
+.card{
+    margin-top:15px;
+    border:1px solid black;
+    width: 35%;
+    padding:45px;
+    position: absolute;
+    top:10%;
+    left:10%;
+    color:white;
+    background-image: URL(https://www.mtl.org/sites/default/files/styles/playlist_banner_big/public/2019-01/34392.jpg?h=e63d848f&itok=hDDxtLHO);
+}
+.button{
+    margin-top:7px;
+}
+a{
+    color: white;
+}

@@ -1,0 +1,39 @@
+<app-header></app-header>
+<app-search></app-search>
+<app-tag></app-tag>
+<app-not-found [visible]="!foods ||foods.length<=0" ReserMessage="Reset Search"></app-not-found>
+<ul>
+    <li *ngFor="let food of foods">
+       
+        <a routerLink="food/{{food.id}}">
+        <img src={{food.imageUrl}}  alt="FOOD IMAGES">
+        <div class="content">
+            <div class="name">
+                {{food.name}}
+            </div>
+            <!-- <span class="favourite"{{food.favourite?true:false}}><span class="glyphicon glyphicon-heart"></span></span> -->
+            <div>
+                <ngb-rating [max]="5" [(rate)]="food.star"  [readonly]="true"></ngb-rating>
+            </div>
+        </div>
+        
+        <div class="product-item-footer" >
+            <div class="origins">
+                <span *ngFor="let origins of food.origins">
+                    {{origins}} 
+                </span>
+                
+            </div>
+            <div class="cooktime">
+                <span>🕐</span>{{food.cookTime}}
+            </div>
+           
+        </div>
+        <div class="price">
+            {{food.price|currency:"INR":"symbol"}}
+        </div>
+
+    </a>
+
+    </li>
+</ul>

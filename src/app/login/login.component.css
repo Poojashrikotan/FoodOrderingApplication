@@ -1,0 +1,22 @@
+.card{
+    margin-top:15px;
+    border:1px solid black;
+    width: 35%;
+    padding:45px;
+    position: absolute;
+    top:20%;
+    left:10%;
+    color:white;
+    background-image: URL(https://www.mtl.org/sites/default/files/styles/playlist_banner_big/public/2019-01/34392.jpg?h=e63d848f&itok=hDDxtLHO);
+    /* background-image: URL(/assets/Foods-1.jpg); */
+}
+.button{
+    margin-top:7px;
+   
+}
+.container{
+    background-image: URL(https://thumbs.dreamstime.com/b/mutton-biryani-chicken-spicy-indian-malabar-hyderabadi-dum-biriyani-pulao-clay-pot-kerala-india-sri-lanka-pakistan-basmati-rice-226776238.jpg);
+}
+a{
+    color: white;
+}

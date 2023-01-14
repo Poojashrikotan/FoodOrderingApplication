@@ -1,0 +1,56 @@
+<app-header></app-header>
+ <app-not-found [visible]="!cart ||cart.items.length<=0" notFoundMessage="No Itemes Trekked..!!" ReserMessage="Go To Home"
+></app-not-found>
+
+<div class="container" *ngIf="cart && cart.items.length>0">
+    <ul>
+        <li *ngFor="let cartItem of cart.items">
+            <div>
+                <img [src]="cartItem.food.imageUrl" [alt]="cartItem.food.imageUrl">
+            </div>
+            <div>
+                <a routerLink="./food/{{cartItem.food.id}}">{{cartItem.food.name}} </a>
+                <div>
+                    <select #quantityselect (change)="changeQuantity(cartItem,quantityselect.value)">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                        <option>11</option>
+                    </select>
+                </div>
+                <div>
+                    {{cartItem.price|currency:"INR":"symbol"}}
+                </div>
+                <div class="romove-button">
+                    <button (click)="removeFromCart(cartItem)">Remove</button>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <div class="checkout">
+        <div class="food-count">
+            {{cart.items.length}}
+        </div>
+        <div class="food-price">
+            {{cart.totalprice|currency:"INR":"symbol"}}
+        </div>
+        <div > 
+            <a routerLink="/checkout">Proceed to Checkout</a>
+        </div>
+        
+        <!-- <google-pay-button environment="TEST" 
+        [buttonSizeMode]="isCustomSize ? 'fill' : 'static'"  [style.width.px]="buttonWidth"
+        [style.height.px]="buttonHeight" (loadpaymentdata)="onLoadPaymentData($event)"></google-pay-button>
+         -->
+    </div>
+    <!-- [buttonColor]="buttonColor" [buttonType]="buttonType"  [paymentRequest]="paymentRequest"-->
+   
+</div>

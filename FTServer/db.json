@@ -1,0 +1,32 @@
+{
+  "signin": [
+    {
+      "id": "1",
+      "name": "Poojashri",
+      "email": "k@gmail.com",
+      "phone": "9686627985",
+      "password": "kotanpooja"
+    },
+    {
+      "id": 3,
+      "name": "Poojashrikotan",
+      "email": "22k@gmail.com",
+      "phone": "9686627985",
+      "password": "kotanpoojakotan"
+    },
+    {
+      "name": "pooja",
+      "email": "kkk@gmail.com",
+      "mobile": "87644h",
+      "password": "jai",
+      "id": 4
+    },
+    {
+      "name": "Poornima",
+      "email": "purni@gmail.com",
+      "mobile": "88776266284",
+      "password": "purni",
+      "id": 5
+    }
+  ]
+}
